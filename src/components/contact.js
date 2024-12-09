@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/style.css";
 import "../assets/css/bootstrap.css";
 import "../assets/css/font-awesome.min.css";
@@ -46,17 +47,17 @@ const contact = () => {
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ">
-                        <li class="nav-item ">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <li className="nav-item active">
+                            <Link to="/" className="nav-link">Home <span className="sr-only">Home</span></Link>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About</a>
+                        <li className="nav-item">
+                            <Link to="/About" className="nav-link">About</Link>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="service.html">Services</a>
+                        <li className="nav-item">
+                            <Link to="/Service" className="nav-link">Services</Link>
                         </li>
-                        <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <li className="nav-item">
+                            <Link to="/Home" className="nav-link">Contact Us</Link>
                         </li>
                     </ul>
                     </div>

@@ -50,9 +50,9 @@ const service = () => {
                     <ul class="navbar-nav ">
                         <li class="nav-item ">
                             <a class="nav-link">
-                                <Link to="/Home">
+                                <Link to="/">
                                     <span>
-                                        Inance
+                                        Home
                                     </span>
                                 </Link>
                             </a>
@@ -66,7 +66,7 @@ const service = () => {
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link">
-                                <Link to="/Services">
+                                <Link to="/Service">
                                         Services
                                 </Link>
                             </a>

@@ -5,8 +5,8 @@ import "../assets/css/bootstrap.css";
 import "../assets/css/font-awesome.min.css";
 import "../assets/css/responsive.css";
 import "../assets/css/style.css.map";
-import "bootstrap";
 import "popper.js";
+import { loadGapi } from "../assets/js/gapiConfig";
 import "../assets/js/custom";
 
 const service = () => {
@@ -94,7 +94,7 @@ const service = () => {
                 <div class="col-sm-6 col-md-4 mx-auto">
                 <div class="box ">
                     <div class="img-box">
-                    <img src="images/s1.png" alt="" />
+                    <img src="./assets/images/s1.png" alt="" />
                     </div>
                     <div class="detail-box">
                     <h5>
@@ -110,7 +110,7 @@ const service = () => {
                 <div class="col-sm-6 col-md-4 mx-auto">
                 <div class="box ">
                     <div class="img-box">
-                    <img src="images/s2.png" alt="" />
+                    <img src="./assets/images/s2.png" alt="" />
                     </div>
                     <div class="detail-box">
                     <h5>
@@ -126,7 +126,7 @@ const service = () => {
                 <div class="col-sm-6 col-md-4 mx-auto">
                 <div class="box ">
                     <div class="img-box">
-                    <img src="images/s3.png" alt="" />
+                    <img src="./assets/images/s3.png" alt="" />
                     </div>
                     <div class="detail-box">
                     <h5>

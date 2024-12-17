@@ -84,7 +84,7 @@ const about = () => {
                 </div>
                 <div className="col-lg-7 col-md-6">
                 <div className="img-box">
-                    <img src="images/about-img.jpg" alt=""/>
+                    <img src="./assets/images/about-img.jpg" alt=""/>
                 </div>
                 </div>
             </div>

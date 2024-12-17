@@ -1,15 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/style.css";
-import "../assets/css/bootstrap.css";
-import "../assets/css/font-awesome.min.css";
-import "../assets/css/responsive.css";
-import "../assets/css/style.css.map";
-import "bootstrap";
-import "popper.js";
+import { useEffect } from "react";
+import { loadGapi } from "../assets/js/gapiConfig";
 import "../assets/js/custom";
 
-const contact = () => {
+const Contact = () => {
+    useEffect(() => {
+      loadGapi();
+      if (window.myMap) {
+        window.myMap();
+      }
+      
+    },[]);
+    window.myMap = function () {
+        if (window.google && window.google.maps) {
+          const mapElement = document.getElementById("googleMap");
+          if (mapElement) {
+            const mapProp = {
+              center: new window.google.maps.LatLng(40.712775, -74.005973),
+              zoom: 18,
+            };
+            new window.google.maps.Map(mapElement, mapProp);
+          } else {
+            console.error("Element with id 'googleMap' not found.");
+          }
+        } else {
+          console.error("Google Maps API not loaded.");
+        }
+      };
   return (
     <div className="contact-container">
         <div class="hero_area">
@@ -96,9 +115,9 @@ const contact = () => {
                 </form>
                 </div>
                 <div class="col-md-6">
-                <div class="map_container">
-                    <div class="map">
-                    <div id="googleMap" style="width:100%;height:100%;"></div>
+                <div className="map_container">
+                    <div className="map">
+                    <div id="googleMap"></div>
                     </div>
                 </div>
                 </div>
@@ -193,5 +212,5 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
 

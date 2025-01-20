@@ -16,7 +16,23 @@ export const initializeGapiClient = async () => {
   }
 };
 
-export const loadGapi = () => {
-  gapi.load("client:auth2", initializeGapiClient);
+export function loadGapi () {
+  const existingScript = document.getElementById("googleMaps");
+
+  if (!existingScript) {
+    const script = document.createElement("script");
+    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+    script.id = "googleMaps";
+    script.async = true;
+    script.defer = true;
+
+    script.onerror = () => {
+      console.error("Failed to load Google Maps script. Check your API key or network connection.");
+    };
+
+    document.body.appendChild(script);
+  } else {
+    console.warn("Google Maps script already loaded.");
+  }
 };
 

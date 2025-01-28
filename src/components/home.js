@@ -10,8 +10,9 @@ import 'owl.carousel';
 
 const Home = () => {
     const navigate = useNavigate();
-    const { lang } = useParams(); // Get the current language from the URL
-    const [language, setLanguage] = useState(lang || "en"); // Fallback to 'en' if no lang is specified
+    const [showBanner, setShowBanner] = useState(true);
+    const { lang } = useParams();
+    const [language, setLanguage] = useState(lang || "en");
     const [isExpanded, setIsExpanded] = useState(false);
     useEffect(() => {
         loadGapi();
@@ -37,15 +38,18 @@ const Home = () => {
       };
 
   const handleExpandClick = () => {
-    setIsExpanded((prev) => !prev); // Toggle the expanded state
+    setIsExpanded((prev) => !prev);
   };
   const handleLanguageToggle = () => {
     const newLanguage = language === "en" ? "ar" : "en";
-    setLanguage(newLanguage); // Update state
-    navigate(`/${newLanguage}`); // Update URL
+    setLanguage(newLanguage);
+    navigate(`/${newLanguage}`);
+    setShowBanner(false);
+  };
+  const handleLanguageSelection = () => {
+    setShowBanner(false);
   };
 
-  // Translations for UI text
   const translations = {
     en: {
         Inance:"Inance",
@@ -146,7 +150,22 @@ const Home = () => {
   };
   const texts = translations[language];
   return (
-    <div className={`home-container ${language === "ar" ? "rtl" : "ltr"}`}>
+    <div className={`home-container ${language === "ar" ? "rtl" : "ltr"} `}>
+        {showBanner && (
+        <div className="language-banner">
+          <div className="language-banner-content">
+            <p>
+                Would you like to view the site in <strong>Arabic</strong>?{" "}
+                <Link to="/ar" className="nav-link" onClick={handleLanguageToggle}>
+                Yes, switch to Arabic
+                </Link>{" "}
+                <Link to="/en" className="nav-link" onClick={handleLanguageSelection}>
+                Stay in English
+                </Link>
+            </p>
+          </div>
+        </div>
+      )}
         <div className="hero_area">
             <header className="header_section">
                 <div className="header_top">

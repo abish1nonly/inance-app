@@ -1,20 +1,18 @@
-<<<<<<< HEAD
+
 @media (max-width: 1300px) {
     
 }
-=======
 @media (max-width: 1300px) {}
->>>>>>> 8345d8584263dd1b087061ce792511430211de32
+
 
 @media (max-width: 1120px) {}
 
 @media (max-width: 992px) {
-<<<<<<< HEAD
     .slider_section .row {
         flex-wrap: wrap; /* Stack columns vertically */
       }
-=======
->>>>>>> 8345d8584263dd1b087061ce792511430211de32
+
+
     .hero_area {
         height: auto;
     }

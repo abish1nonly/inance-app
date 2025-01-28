@@ -1,6 +1,5 @@
 import React from "react";
 import { Link,useParams, useNavigate } from "react-router-dom";
-import $ from "jquery";
 import '../assets/js/custom';
 import { useEffect, useState } from "react";
 import { loadGapi } from "../assets/js/gapiConfig";
@@ -86,7 +85,6 @@ const Home = () => {
             p1:"Plumbing",
             p2:"when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
             viewMore:"View More",
-            contactUs:"Contact Us",
             corouseltit:"What Our Clients Say",
             cli_name:"Jorch morik",
             cli_mess:"chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum",
@@ -112,7 +110,6 @@ const Home = () => {
             lang2: "عربي",
             call: "اتصال",
             email: "بريد إلكتروني",
-            contactUs: "اتصل بنا",
             corouseltit:"ماذا يقول عملاؤنا",
             cli_name:"جورش موريك",
             cli_mess:"قطع حسب الضرورة، مما يجعل هذا المولد الحقيقي الأول على شبكة الإنترنت. يستخدم قاموسًا يضم أكثر من 200 كلمة لاتينية، بالإضافة إلى مجموعة من هياكل الجمل النموذجية، لإنشاء لوريم إيبسوم",

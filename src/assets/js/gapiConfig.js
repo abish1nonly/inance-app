@@ -34,5 +34,5 @@ export function loadGapi () {
   } else {
     console.warn("Google Maps script already loaded.");
   }
-};
+}
 

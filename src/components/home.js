@@ -73,7 +73,7 @@ const Home = () => {
 
   const translations = {
     en: {
-        Inance:"Inance",
+        inance:"Inance",
         home: 'Home',
             about: 'About',
             services: 'Services',
@@ -208,7 +208,7 @@ const Home = () => {
                 <div className="header_bottom">
                     <div className="container-fluid">
                         <nav className="navbar navbar-expand-lg custom_nav-container ">
-                            <Link to="" className="navbar-brand"><span>{texts.inance}</span></Link>
+                            <Link to="" className="navbar-brand"><h1>{texts.inance}</h1></Link>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"> </span>
                             </button>

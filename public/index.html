@@ -50,7 +50,7 @@
     <!-- Google Maps and API Scripts -->
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuo79yMjGkINKS0qjy34mUR77V6tgRGG0"></script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YVF50F149S"></script>
     <!-- Custom Scripts -->
     <script src="../src/assets/js/custom.js"></script>
     <script src="../src/index.js"></script>
@@ -61,6 +61,12 @@
     </script>
     <script src="../src/assets/js/custom.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap" async defer></script>
-
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-YVF50F149S');
+    </script>
   </body>
 </html>
